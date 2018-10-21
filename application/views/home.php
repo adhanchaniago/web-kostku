@@ -1,30 +1,6 @@
 <?php $this->load->view('header_footer/header_home'); 
 	$rows=1;
 	
-	function get_time_ago( $time )
-	{
-	    $time_difference = (time() + 60 * 60 * 5) - $time;
-
-	    if( $time_difference < 1 ) { return 'less than 1 second ago'; }
-	    $condition = array( 12 * 30 * 24 * 60 * 60 =>  'year',
-	                30 * 24 * 60 * 60       =>  'month',
-	                24 * 60 * 60            =>  'day',
-	                60 * 60                 =>  'hour',
-	                60                      =>  'minute',
-	                1                       =>  'second'
-	    );
-
-	    foreach( $condition as $secs => $str )
-	    {
-	        $d = $time_difference / $secs;
-
-	        if( $d >= 1 )
-	        {
-	            $t = round( $d );
-	            return $t . ' ' . $str . ( $t > 1 ? 's' : '' ) . ' ago';
-	        }
-	    }
-	}
 ?>
 
 <br>
@@ -38,26 +14,79 @@
 	</div>
 	<div class="row">
 		
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 			<div class="card">
-				<div class="text-center" style="background-color: #27AB27;color: #fff;font-weight: 700">ADA 10 KAMAR</div>
 				<img class="img-responsive" src="<?=base_url()?>img/m/k1.jpg"></tr>
-				<div style="color: #3e5168;font-weight: 700; font-size: 16px;">Kost Kembang Turi No 26 Malang</div>
+				<div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #27AB27">
+						<div class="text-center" style=";color: #fff;font-weight: 700; ">ADA 10 KAMAR</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<span style="color: #27AB27;font-weight: 700">Rp. 800rb/bln</span>
+					</div>	
+				</div>
+				
+				<div >
+					<button class="tagputri btn">Putri</button>
+				</div>
+
+				<div style="font-weight: 700; font-size: 18px; margin-top: 5px ">
+				<a href="" style="color: #3e5168;">Kost Kembang Turi No 26 Malang</a></div>
 				<br><br><br>
-				<button class="btn-group-justified">Hubungi Kost Ini</button>
+				<a style="text-decoration: none; color: #2d2d2d;" href="<?php echo site_url('/Kostku/lihat_kost')?>">
+					<button class="btn btn-group-justified">Hubungi Kost Ini</button>
+				</a>
 			</div>
 		</div>
 
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 			<div class="card">
-				<div class="text-center" style="background-color: #27AB27;color: #fff;font-weight: 700">ADA 10 KAMAR</div>
 				<img class="img-responsive" src="<?=base_url()?>img/m/k1.jpg"></tr>
-				<div style="font-weight: 700; font-size: 16px;">
+				<div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #27AB27">
+						<div class="text-center" style=";color: #fff;font-weight: 700; ">ADA 10 KAMAR</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<span style="color: #27AB27;font-weight: 700">Rp. 800rb/bln</span>
+					</div>	
+				</div>
+				
+				<div>
+					<button class="btn tagputra">Putra</button>
+				</div>
+
+				<div style="font-weight: 700; font-size: 18px; margin-top: 5px ">
 				<a href="" style="color: #3e5168;">Kost Kembang Turi No 26 Malang</a></div>
 				<br><br><br>
-				<button class="btn btn-group-justified">Hubungi Kost Ini</button>
+				<button class="btn btn-group-justified" style="">Hubungi Kost Ini</button>
 			</div>
 		</div>
+
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<div class="card">
+				<img class="img-responsive" src="<?=base_url()?>img/m/k1.jpg"></tr>
+				<div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #27AB27">
+						<div class="text-center" style=";color: #fff;font-weight: 700; ">ADA 10 KAMAR</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<span style="color: #27AB27;font-weight: 700">Rp. 800rb/bln</span>
+					</div>	
+				</div>
+				
+				<div>
+					<button class="btn tagcampur">Campur</button>
+				</div>
+
+				<div style="font-weight: 700; font-size: 18px; margin-top: 5px ">
+				<a href="" style="color: #3e5168;">Kost Kembang Turi No 26 Malang</a></div>
+				<br><br><br>
+				<button class="btn btn-group-justified" style="">Hubungi Kost Ini</button>
+			</div>
+		</div>
+
 
 	</div>
 
@@ -68,7 +97,8 @@
 <br><br>
 
 <center>
-	<button type="button" class="btn" style="color: #2d2d2d;font-weight: 600;font-size: 18px;">Lihat Lebih Banyak Lagi +</button>
+	<a href="<?php echo site_url('/Kostku/home_guest')?>">
+	<button type="button" class="btn" style="color: #2d2d2d;font-weight: 600;font-size: 18px;">Lihat Lebih Banyak Lagi +</button></a>
 </center>
 
 
