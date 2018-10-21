@@ -7,7 +7,10 @@
 		margin-left: 50px;
 	    margin-right: 20px;
 	}
-	body { font-family: 'Titillium Web'; }
+	body { 
+		font-family: 'Titillium Web';
+		background-color: #FFF;
+	}
 	/*font-family: 'Titillium Web';font-size: 22px;*/
 	
 	.buttono {
@@ -26,6 +29,7 @@
     transition-duration: 0.4s;
     cursor: pointer;
 	}
+
 	.button4 {
     background-color: white;
     color: black;
@@ -34,5 +38,80 @@
 
 	.button4:hover {background-color: #e7e7e7;}
 
+
+	div.example {
+	  background-color: lightgrey;
+	  padding: 20px;
+	}
+
+	@media screen and (min-width: 601px) {
+	  div.example {
+	    font-size: 80px;
+	  }
+	}
+
+	@media screen and (max-width: 600px) {
+	  div.example {
+	    font-size: 30px;
+	  }
+	}
+
+	.tagputri {
+	    background-color: #EA6085; 
+	  	color: #fff;
+		font-size: 14px;    
+		border-radius: 5px;
+	    background-color: #EA6085;
+
+	    padding-top: 2px;
+	    padding-right: 5px;
+	    padding-bottom: 2px;
+	    padding-left: 5px;
+	    
+	    margin-top: 5px;
+	    margin-right: 3px;
+	    margin-bottom: 0px;
+	    margin-left: 3px;
+
+	    cursor: default;
+	}
+
+	.tagputra {
+	    background-color: #3498DB; 
+	  	color: #fff;
+		font-size: 14px;    
+		border-radius: 5px;
+
+	    padding-top: 2px;
+	    padding-right: 5px;
+	    padding-bottom: 2px;
+	    padding-left: 5px;
+	    
+	    margin-top: 5px;
+	    margin-right: 3px;
+	    margin-bottom: 0px;
+	    margin-left: 3px;
+
+	    cursor: default;
+	}
+
+	.tagcampur {
+	    background-color: #9656B0; 
+	  	color: #fff;
+		font-size: 14px;    
+		border-radius: 5px;
+
+	    padding-top: 2px;
+	    padding-right: 5px;
+	    padding-bottom: 2px;
+	    padding-left: 5px;
+	    
+	    margin-top: 5px;
+	    margin-right: 3px;
+	    margin-bottom: 0px;
+	    margin-left: 3px;
+
+	    cursor: default;
+	}
 
 

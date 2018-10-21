@@ -88,6 +88,10 @@ class Kostku extends CI_Controller {
 		redirect('Kostku','refresh');
 	}
 
+	public function lihat_kost()
+	{
+		$this->load->view('guest/lihat_kost');
+	}
 ////////////////////////  Process sys   //////////////////////////////////////////////////
 
 
