@@ -54,12 +54,13 @@ tr:hover {background-color:#f5f5f5;}
 
 	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 		
-		<div class="row">
-			<div class="col-lg-2 col-md-3 col-xs-12">
-				<strong style="font-size: 14px;font-weight: bold;">Kamar Mandi</strong>
+		<!-- Fasilitas Kamar -->
+		<div class="row" style="border-bottom: 1px solid #ddd; margin-top: 10px;">
+			<div class="col-lg-3 col-md-3 col-xs-12">
+				<strong style="font-size: 14px;font-weight: bold;">Fasilitas Kamar</strong>
 			</div>
 
-			<div class="col-lg-10 col-md-9 col-xs-12">
+			<div class="col-lg-9 col-md-9 col-xs-12">
 				
 				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
 					<div class="row">
@@ -81,19 +82,118 @@ tr:hover {background-color:#f5f5f5;}
 						<span style="font-size: 14px;">Kamar Mandi Luar"</span>
 					</div>
 				</div>
+			</div>
+			<div style="height: 50px"></div>
+		</div>
+		<!-- END Fasilitas Kamar -->
 
+		<!-- LUAS KAMAR -->
+		<div class="row"  style="border-bottom: 1px solid #ddd; margin-top: 10px;">
+			<div class="col-lg-3 col-md-3 col-xs-12">
+				<strong style="font-size: 14px;font-weight: bold;">Luas Kamar</strong>
 			</div>
 
+			<div class="col-lg-9 col-md-9 col-xs-12">
+				
+				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+					<div class="row">
+						<span style="font-size: 14px;" > 3x3</span>
+					</div>
+				</div>
+			</div>
+			<div style="height: 40px"></div>
 		</div>
+		<!-- END LUAS KAMAR -->
+
+		<!-- KAMAR MANDI -->
+		<div class="row" style="border-bottom: 1px solid #ddd; margin-top: 10px;">
+			<div class="col-lg-3 col-md-3 col-xs-12">
+				<strong style="font-size: 14px;font-weight: bold;">Kamar Mandi</strong>
+			</div>
+
+			<div class="col-lg-9 col-md-9 col-xs-12">
+				
+				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+					<div class="row">
+						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/r5PJur0V.png" alt="Kloset Duduk">
+						<span style="font-size: 14px;" >Kloset Duduk</span>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+					<div class="row">
+						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/efKlNbEw.png" alt="Kamar Mandi Luar"">
+						<span style="font-size: 14px;">Kamar Mandi Luar"</span>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+					<div class="row">
+						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/efKlNbEw.png" alt="Kamar Mandi Luar"">
+						<span style="font-size: 14px;">Kamar Mandi Luar"</span>
+					</div>
+				</div>
+			</div>
+			<div style="height: 50px"></div>
+		</div>
+		<!-- END KAMAR MANDI -->
+
+		<!-- FASILITAS UMUM -->
+		<div class="row"  style="border-bottom: 1px solid #ddd; margin-top: 10px;">
+			<div class="col-lg-3 col-md-3 col-xs-12">
+				<strong style="font-size: 14px;font-weight: bold;">Fasilitas Umum</strong>
+			</div>
+
+			<div class="col-lg-9 col-md-9 col-xs-12">
+				
+				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+					<div class="row">
+						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/2uIBfAtw.png" alt="Kloset Duduk">
+						<span style="font-size: 14px;" > Akses 24 Jam</span>
+					</div>
+				</div>
+			</div>
+			<div style="height: 40px"></div>
+		</div>
+		<!-- FASILITAS UMUM -->
+
+		<!-- FASILITAS Parkir -->
+		<div class="row" style="border-bottom: 1px solid #ddd; margin-top: 10px;">
+			<div class="col-lg-3 col-md-3 col-xs-12">
+				<strong style="font-size: 14px;font-weight: bold;">Fasilitas Parkir</strong>
+			</div>
+
+			<div class="col-lg-9 col-md-9 col-xs-12">
+				
+				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+					<div class="row">
+						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/2uIBfAtw.png" alt="Kloset Duduk">
+						<span style="font-size: 14px;" >Kloset Duduk</span>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+					<div class="row">
+						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/efKlNbEw.png" alt="Kamar Mandi Luar"">
+						<span style="font-size: 14px;">Kamar Mandi Luar"</span>
+					</div>
+				</div>
+
+			</div>
+			<div style="height: 50px"></div>
+		</div>
+		<!-- FASILITAS Parkir  -->
 
 	</div>
 
 	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-		<div style="background-color: #009B4C;">
-			<div class="text-center" style=";color: #fff;font-weight: 700;">ADA 10 KAMAR</div>
+		
+		<div class="text-center" style=";color: #fff;font-weight: 700;height: 30px; background-color: #009B4C; ">
+			ADA 10 KAMAR
 		</div>
 		
-		<div style="margin-left: 15px;margin-right: 15px;margin-top: 20px">
+		<br>
+		<div style="margin-left: 15px;margin-right: 15px;">
 			<table>
 			  <tr>
 			    <td>Rp 150,000</td>
@@ -122,6 +222,15 @@ tr:hover {background-color:#f5f5f5;}
 			<button class="btn btn-group-justified" style="background-color: #FE522A;">
 				<span style="color: #FFF;font-weight: 700">HUBUNGI KOST</span>
 			</button>
+
+			<div class="text-center" style="font-weight: bold; font-size: 14px">
+				<br>
+				Update Terakhir Pada
+				<br>
+				<span style="color: #27ab27;">05-10-2018</span>
+				<br>
+				<span style="font-size: 12px">*Data bisa berubah sewaktu-waktu</span>
+			</div>
 
 		</div>
 

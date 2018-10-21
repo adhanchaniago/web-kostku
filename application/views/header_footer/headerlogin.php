@@ -22,7 +22,7 @@
 		
 	</head>
 	<body style="background-color: #F0F3F5">
-		<nav class="navbar navbar-expand-md fixed-top" style="background-color: #27AB27; color: #FFFFFE;">
+		<nav class="navbar navbar-expand-md fixed-top" style="background-color: #27AB27; color: #FFFFFE; height: 50px">
 			<a class="navbar-brand" style="color: #FFFFFE;" href="<?php echo site_url('Kostku/'); ?>">Help.my</a>
 
 			<div class="collapse navbar-collapse" id="navbarCollapse">

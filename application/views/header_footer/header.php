@@ -19,10 +19,10 @@
 		
 	</head>
 	<body style="background-color: #F0F3F5">
-		<nav class="navbar navbar-expand-md fixed-top" style="background-color: #27AB27; color: #FFFFFE;">
+		<nav class="navbar navbar-expand-md fixed-top" style="background-color: #27AB27; color: #FFFFFE; height: 50px">
 			<div class="container-fluid" style="margin-left: 2%">
 			<a href="<?php echo site_url('Kostku/'); ?>">
-				<img style="padding-left: 10px" src="<?=base_url()?>img/P.png" width="81" height="36">
+				<img style="padding-left: 10px;margin-top: 5px;" src="<?=base_url()?>assets/img/logo.png" height="35">
 			</a>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav mr-auto navbar-form">
