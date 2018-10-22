@@ -140,7 +140,7 @@
               <strong>Apakah Anda Yakin Ingin Menghapus User Berikut?</strong>
             </div>
             <div class="modal-footer">
-              <input type="text" name="id_user_delete" id="id_user_delete" class="form-control">
+              <input type="hidden" name="id_user_delete" id="id_user_delete" class="form-control">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
               <button type="button" type="submit" id="btn_deleted" class="btn btn-primary">Yes</button>
             </div>

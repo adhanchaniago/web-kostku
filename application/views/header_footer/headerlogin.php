@@ -22,13 +22,8 @@
 		
 	</head>
 	<body style="background-color: #F0F3F5">
-<<<<<<< HEAD
 		<nav class="navbar navbar-expand-md fixed-top" style="background-color: #27AB27; color: #FFFFFE; height: 50px">
 			<a class="navbar-brand" style="color: #FFFFFE;" href="<?php echo site_url('Kostku/'); ?>">Kost.ku</a>
-=======
-		<nav class="navbar navbar-expand-md fixed-top" style="background-color: #27AB27; color: #FFFFFE;">
-			<a class="navbar-brand" style="color: #FFFFFE;" href="<?php echo site_url('Kostku/'); ?>">Help.my</a>
->>>>>>> parent of 114359e... logo home
 
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				
