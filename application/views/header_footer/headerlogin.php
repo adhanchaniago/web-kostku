@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Bangun Datar</title>
+		<title>Kost.ku</title>
 		
 		<link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/styleku.css">
 		<link rel="stylesheet" href="<?=base_url()?>assets/font-awesome/css/fontawesome.min.css" />
@@ -23,7 +23,7 @@
 	</head>
 	<body style="background-color: #F0F3F5">
 		<nav class="navbar navbar-expand-md fixed-top" style="background-color: #27AB27; color: #FFFFFE; height: 50px">
-			<a class="navbar-brand" style="color: #FFFFFE;" href="<?php echo site_url('Kostku/'); ?>">Help.my</a>
+			<a class="navbar-brand" style="color: #FFFFFE;" href="<?php echo site_url('Kostku/'); ?>">Kost.ku</a>
 
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				

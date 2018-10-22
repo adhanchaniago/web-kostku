@@ -59,7 +59,7 @@ class User extends CI_Controller {
 		}
 	}
 
-	public function edit_manga()
+	public function edit_kost()
 	{
 		$id_kost = $this->input->post('id_kost_edit'); //get id_kost
 		$alamat = $this->input->post('alamat_edit'); //get alamat
