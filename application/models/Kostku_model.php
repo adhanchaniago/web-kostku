@@ -41,6 +41,17 @@ class Kostku_model extends CI_Model {
 		}
 	}
 
+	 public function get_kost()
+    {
+    	$this->db->select('id_kamar,foto_kamar,harga,alamat,Kelamin,jumlah_kamar');
+		$this->db->from('kamar');
+		$this->db->join('kost', 'kamar.id_kost = kost.id_kost');
+		// $this->db->where('id_user',$sessData['username']);
+		// $this->db->order_by('tanggal', 'desc');
+        $query=$this->db->get();
+        return $query->result();
+    }  
+
 
 ////////////////////////////////////////////////////////////////////
 

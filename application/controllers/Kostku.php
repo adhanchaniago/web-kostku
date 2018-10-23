@@ -28,7 +28,10 @@ class Kostku extends CI_Controller {
 		
 	}
 
-	
+	public function getKostku()
+	{
+        echo json_encode( $this->Kostku_model->get_kost());
+	}
 
 	public function daftar()
 	{
