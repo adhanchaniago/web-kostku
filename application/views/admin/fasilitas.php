@@ -5,19 +5,20 @@
     <li class="active">Home</li>
   </ol>
     <div class="panel panel-default">
-<div class="panel-heading"><a href="<?=site_url('Admin/')?>">Daftar User</a>  <a href="<?=site_url('Admin/data_fasilitas')?>">Daftar Fasilitas</a></div>
+      <div class="panel-heading">
+          <a href="<?=site_url('Admin/')?>">Daftar User</a>  
+          <a href="<?=site_url('Admin/data_fasilitas')?>">Daftar Fasilitas</a>
+      </div>
       <div class="panel-body">
-        <div class="pull-right"><a href="javascript:void(0);" class="btn btn-primary" data-toggle="modal" data-target="#Modal_Add"><span class="fa fa-plus"></span> Tambah User</a></div>
+        <div class="pull-right"><a href="javascript:void(0);" class="btn btn-primary" data-toggle="modal" data-target="#Modal_Add"><span class="fa fa-plus"></span> Tambah Fasilitas</a></div>
         <table class="table table-striped" id="mydata">
           <thead>
             <tr>
               <th>No</th>
-              <th>username</th>
-              <th>password</th>
-              <th>email</th>
-              <th>Hp</th>
-              <th>level</th>
-              <th>status</th>
+              <th>Icon</th>
+              <th>kategori fasilitas</th>
+              <th>Nama</th>
+              <th>id</th>
               <th>Edit</th>
               <th>Hapus</th>
             </tr>
@@ -46,20 +47,26 @@
           <div class="modal-body">
             
             <div class="form-group">
-              <label for="usr">Name :</label>
-              <input type="text" class="form-control" name="usr" id="user_sign" placeholder="username" required="not null">
+              <label for="usr">Nama Fasilitas :</label>
+              <input type="text" class="form-control" name="nm_fasilitas" id="nm_fasilitas" placeholder="nama Fasilitas" required="not null">
             </div>
             <div class="form-group">
-              <label for="usr">Nomor :</label>
-              <input type="text" class="form-control" name="nohp" id="no_hp_sign" placeholder="Nomor Hp" required="not null">
+
+              <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Pilih Kategori </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Fasilitas Kamar</a></li>
+                    <li><a href="#">Kamar Mandi</a></li>
+                    <li><a href="#">Umum</a></li>
+                    <li><a href="#">Parkir</a></li>
+                  </ul>
+              </div>
+              
             </div>
+
             <div class="form-group">
-              <label for="email">Email :</label>
-              <input type="email" class="form-control" name="email" id="email_sign" placeholder="email@address.com" required="">
-            </div>
-            <div class="form-group">
-              <label for="pwd">Password :</label>
-              <input type="password" class="form-control" name="pwd" id="pass_sign"  required="">
+              <label for="pwd">Icon :</label>
+              <input type="file" class="form-control" name="icon" id="icon"  required="">
             </div>  
 
             <div id="responseDivS" class="alert text-center" style="margin-top:20px; display:none;">
@@ -68,7 +75,7 @@
             </div>
                 
             <CENTER>
-              <button type="button" class="btn btn-success" id="btn_signup">Sign Up</button>
+              <button type="button" class="btn btn-success" id="btn_tambah">Tambahkan</button>
             </CENTER>
           </div>
           <div class="modal-footer">
@@ -178,4 +185,4 @@
     </form>
   <!--END MODAL DELETE-->
 
-<?php $this->load->view('admin/footer'); ?>
+<?php $this->load->view('admin/footer_fasilitas'); ?>

@@ -67,7 +67,7 @@
 								$('#pass_sign').val("");
 								$('#con_pass_sign').val("");
 								// if (response.level == "Administrator") {
-								// 	setTimeout(' window.location.href = "<?php echo site_url('Admin'); ?>" ',3000);
+									setTimeout(' window.location.href = "<?php echo site_url('Kostku/daftar'); ?>" ',900);
 								// }
 							}
 		                }

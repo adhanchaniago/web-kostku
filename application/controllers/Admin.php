@@ -14,9 +14,20 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/home');
 	}
 
+	public function data_fasilitas()
+	{
+		$this->load->view('admin/fasilitas');
+	}
+
+
 	public function getUser()
 	{
         echo json_encode( $this->admin_model->get_user());
+	}
+
+	public function getFasilitas()
+	{
+        echo json_encode( $this->admin_model->get_fasilitas());
 	}
 
 	public function delete_User()
@@ -43,26 +54,12 @@ class Admin extends CI_Controller {
 				}	
 	}
 
-
-	public function mapel_update()
+	public function update_User()
 	{
-			$config['upload_path']   = './img/mapel'; 
-		         $config['allowed_types'] = 'gif|jpg|png'; 
-		         $config['max_size']      = 80000; 
-		         $config['max_width']     = 4400; 
-		         $config['max_height']    = 3320;  
-		        $this->load->library('upload', $config);
+		$this->admin_model->update_User();
 
-			if(!$this->upload->do_upload('fotobaru')){
-					$status="t";
-					$this->helpmy_model_admin->update_mapel($status);
-					redirect('Admin/mapellist','refresh');
-				}else{
-					unlink('./img/mapel/'.$this->input->post('fotolama'));				
-					$status="y";
-					$this->helpmy_model_admin->update_mapel($status);
-					redirect('Admin/mapellist','refresh');
-				}
+		$output['message'] = 'Success';
+		echo json_encode($output);
 	}
 
 

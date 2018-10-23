@@ -9,30 +9,23 @@ class admin_model extends CI_Model {
        	return $query->result();
 	}	
 
-	public function save_kost($alamat,$Kelamin,$deskripsi,$foto_kost,$id_pemilik){
-        $data = array(
-                'alamat'  => $alamat, 
-                'kota'  => "Malang", 
-                'propinsi' => "Jawa Timur", 
-                'Kelamin' => $Kelamin,
-                'deskripsi' => $deskripsi,
-                'jumlah_kamar' => 0,
-                'foto_kost' => $foto_kost,
-                'id_pemilik' => $id_pemilik
-            );
-        $result=$this->db->insert('kost',$data);
-        return $result;
-    }	
+    public function get_fasilitas()
+    {
+        $query=$this->db->get('daftar_fasilitas');
+        return $query->result();
+    }   
 
-    public function edit_kost($id_kost,$alamat,$Kelamin,$deskripsi,$foto_kost){
+    public function update_User(){
         $data = array(
-                'alamat'  => $alamat,
-                'Kelamin' => $Kelamin,
-                'deskripsi' => $deskripsi,
-                'foto_kost' => $foto_kost
+                'username'  => $this->input->post('uname'),
+                'password' => $this->input->post('password'),
+                'email' => $this->input->post('email'),
+                'no_hp' => $this->input->post('nohp'),
+                'level' => $this->input->post('level'),
+                'is_activated' =>$this->input->post('status')
             );
-        $this->db->where('id_kost', $id_kost);
-        $result=$this->db->update('kost',$data);
+        $this->db->where('id_user', $this->input->post('id_user'));
+        $result=$this->db->update('user',$data);
         return $result;
     }
 

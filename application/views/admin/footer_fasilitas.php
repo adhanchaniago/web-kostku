@@ -17,7 +17,7 @@
         function show_kost(){
             $.ajax({
                 type  : 'ajax',
-                url   : '<?php echo base_url();?>index.php/Admin/getUser',
+                url   : '<?php echo base_url();?>index.php/Admin/getFasilitas',
                 dataType : 'json',
                 success : function(data){
                     var html = '';
@@ -26,31 +26,11 @@
                         a=i+1;
                         html += '<tr>'+
                             '<td>'+a+'</td>'+
-                            '<td>'+data[i].username+'</td>'+
-                            '<td>'+data[i].password+'</td>'+
-                            '<td>'+data[i].email+'</td>'+
-                            '<td>'+data[i].no_hp+'</td>'+
-                            '<td>'+data[i].level+'</td>';
-
-                        if (data[i].is_activated==1) {
-                            html +=
-                            '<td>'+
-                                '<label class="switch">'+
-                                    '<input type="checkbox" checked disabled>'+
-                                    '<span class="slider round"></span>'+
-                                '</label>'+
-                            '<td>';    
-                        }else{
-                            html +=
-                            '<td>'+
-                                '<label class="switch">'+
-                                    '<input type="checkbox" disabled>'+
-                                    '<span class="slider round"></span>'+
-                                '</label>'+
-                            '<td>';
-                        }
-                        html +=
-                            '<a href="javascript:void(0);" class="btn btn-warning btn-sm item_edit" data-id_user="'+data[i].id_user+'" data-username="'+data[i].username+'" data-password="'+data[i].password+
+                            '<td><img src="<?=base_url()?>./assets/ico/'+data[i].icon+'" height="35" width="35"></td>'+
+                            '<td>'+data[i].kategori+'</td>'+
+                            '<td>'+data[i].nama_fasilitas+'</td>'+
+                            '<td>'+data[i].id_fasilitas+'</td>'+
+                            '<td><a href="javascript:void(0);" class="btn btn-warning btn-sm item_edit" data-id_user="'+data[i].id_user+'" data-username="'+data[i].username+'" data-password="'+data[i].password+
                             '" data-email="'+data[i].email+'" data-nohp="'+data[i].no_hp+'" data-level="'+data[i].level+'" data-status="'+data[i].is_activated+'">Edit</a>'+
                             '</td>'+
                             '<td>'+
