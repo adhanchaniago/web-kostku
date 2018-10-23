@@ -55,7 +55,7 @@ class User extends CI_Controller {
 			$foto_kost = $data['upload_data']['file_name']; //set file name ke variable image
 			$id_user = $data['id_user'];
 
-			$this->admin_model->save_kost($alamat,$Kelamin,$deskripsi,$foto_kost,$id_user); //kirim value ke model admin_model	
+			$this->user_model->save_kost($alamat,$Kelamin,$deskripsi,$foto_kost,$id_user); //kirim value ke model user_model	
 		}
 	}
 
@@ -77,11 +77,11 @@ class User extends CI_Controller {
 
 			$image = $data['upload_data']['file_name']; //set file name ke variable image
 
-			$this->admin_model->edit_kost($id_kost,$alamat,$Kelamin,$deskripsi,$foto_kost);
+			$this->user_model->edit_kost($id_kost,$alamat,$Kelamin,$deskripsi,$foto_kost);
 			unlink('./assets/img_kost/'.$hapus);
 		}
 		else {
-			$this->admin_model->edit_kost($id_kost,$alamat,$Kelamin,$deskripsi,$hapus);
+			$this->user_model->edit_kost($id_kost,$alamat,$Kelamin,$deskripsi,$hapus);
 		}
 	}
 

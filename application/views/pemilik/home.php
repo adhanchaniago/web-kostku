@@ -51,7 +51,7 @@
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Gender</label>
               <div class="col-md-10">
-                <input type="text" name="kelamin" id="kelamin" class="form-control" placeholder="Gender">
+                <input type="text" name="Kelamin" id="Kelamin" class="form-control" placeholder="Gender">
               </div>
             </div>
             <div class="form-group row">
