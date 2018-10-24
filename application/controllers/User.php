@@ -41,7 +41,6 @@ class User extends CI_Controller {
 	public function upload_kost()
 	{
 		$session_data = $this->session->userdata('kostku_logged_in');
-		$data['id_user'] = $session_data['id_user'];
 		$config['upload_path']="./assets/img_kost"; //path folder file upload
 		$config['allowed_types']='gif|jpg|png'; //type file yang boleh di upload
 
@@ -53,7 +52,7 @@ class User extends CI_Controller {
 			$Kelamin = $this->input->post('Kelamin'); //get Kelamin
 			$deskripsi = $this->input->post('deskripsi'); //get deskripsi
 			$foto_kost = $data['upload_data']['file_name']; //set file name ke variable image
-			$id_user = $data['id_user'];
+			$id_user = $session_data['id_user'];
 
 			$this->user_model->save_kost($alamat,$Kelamin,$deskripsi,$foto_kost,$id_user); //kirim value ke model user_model	
 		}
