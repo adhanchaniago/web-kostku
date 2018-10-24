@@ -92,13 +92,13 @@
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Alamat</label>
                 <div class="col-md-10">
-                  <input type="text" name="alamat_edit" id="alamat_edit" class="form-control" placeholder="Alamat" readonly>
+                  <input type="text" name="alamat_edit" id="alamat_edit" class="form-control" placeholder="Alamat">
                 </div>
             </div>
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Gender</label>
               <div class="col-md-10">
-                <input type="text" name="kelamin_edit" id="kelamin_edit" class="form-control" placeholder="Gender">
+                <input type="text" name="Kelamin_edit" id="Kelamin_edit" class="form-control" placeholder="Gender">
               </div>
             </div>
             <div class="form-group row">

@@ -84,6 +84,23 @@ class User extends CI_Controller {
 		}
 	}
 
+	public function delete_kost()
+	{
+		$id_kost = $this->input->post('id_kost');
+		$data = $this->user_model->delete_kost($id_kost);
+		echo json_encode($data);
+	}
+
+	function delete_files($dir) { 
+		foreach(glob($dir . '/*') as $file) { 
+			if(is_dir($file)){
+				$this->delete_files($file);	
+			}  else{
+				unlink($file); 	
+			} 
+		} rmdir($dir); 
+	}
+
 }
 
 /* End of file User.php */

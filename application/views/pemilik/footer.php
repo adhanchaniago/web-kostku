@@ -35,7 +35,7 @@
                             '<a href="javascript:void(0);" class="btn btn-info btn-sm item_detail" data-id_kost="'+data[i].id_kost+'">Data</a>'+
                             '</td>'+
                             '<td>'+
-                            '<a href="javascript:void(0);" class="btn btn-warning btn-sm item_edit" data-id_kost="'+data[i].id_kost+'" data-alamat="'+data[i].alamat+'" data-Kelamin="'+data[i].Kelamin+'" data-deskripsi="'+data[i].deskripsi+'" data-lfoto="'+data[i].foto_kost+'">Edit</a>'+
+                            '<a href="javascript:void(0);" class="btn btn-warning btn-sm item_edit" data-id_kost="'+data[i].id_kost+'" data-alamat="'+data[i].alamat+'" data-kelamin="'+data[i].Kelamin+'" data-deskripsi="'+data[i].deskripsi+'" data-lfoto="'+data[i].foto_kost+'">Edit</a>'+
                             '</td>'+
                             '<td>'+
                                 '<a href="javascript:void(0);" class="btn btn-danger btn-sm item_delete" data-id_kost="'+data[i].id_kost+'" data-title="'+data[i].title+'">Hapus</a>'+
@@ -83,19 +83,19 @@
         //get data for update record
         $('#show_data').on('click','.item_edit',function(){
           var alamat        = $(this).data('alamat');
-          var Kelamin           = $(this).data('Kelamin');
+          var kelamin           = $(this).data('kelamin');
           var deskripsi        = $(this).data('deskripsi');
           var lfoto          = $(this).data('lfoto');
              
           $('#Modal_Edit').modal('show');
           $('[name="alamat_edit"]').val(alamat);
-          $('[name="Kelamin_edit"]').val(Kelamin);
+          $('[name="Kelamin_edit"]').val(kelamin);
           $('[name="deskripsi_edit"]').val(deskripsi);
           $('[name="lfoto"]').val(lfoto);
         });
         
         //update record to database
-        $('#editManga').submit(function(e){
+        $('#editKost').submit(function(e){
           e.preventDefault();
           $.ajax({
             url:'<?php echo base_url();?>index.php/User/edit_kost', //URL submit
