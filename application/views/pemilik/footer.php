@@ -84,14 +84,12 @@
         $('#show_data').on('click','.item_edit',function(){
           var id_kost        = $(this).data('id_kost');
           var alamat        = $(this).data('alamat');
-          var kelamin           = $(this).data('kelamin');
           var deskripsi        = $(this).data('deskripsi');
           var lfoto          = $(this).data('lfoto');
              
           $('#Modal_Edit').modal('show');
           $('[name="id_kost_edit"]').val(id_kost);
           $('[name="alamat_edit"]').val(alamat);
-          $('[name="Kelamin_edit"]').val(kelamin);
           $('[name="deskripsi_edit"]').val(deskripsi);
           $('[name="lfoto"]').val(lfoto);
         });

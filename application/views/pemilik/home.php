@@ -51,13 +51,18 @@
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Gender</label>
               <div class="col-md-10">
-                <input type="text" name="Kelamin" id="Kelamin" class="form-control" placeholder="Gender">
+                <!-- <input type="text" name="Kelamin" id="Kelamin" class="form-control" placeholder="Gender"> -->
+                <select class="form-control" name="Kelamin" id="Kelamin">
+                  <option value="Putra">Putra</option>
+                  <option value="Putri">Putri</option>
+                  <option value="Campur">Campur</option>
+                </select>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Deskripsi</label>
               <div class="col-md-10">
-                <input type="text" name="deskripsi" id="deskripsi" class="form-control" placeholder="Deskripsi" required>
+                <textarea name="deskripsi" id="deskripsi" class="form-control" rows="3"></textarea>
               </div>
             </div>
             <div class="form-group row">
@@ -98,13 +103,17 @@
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Gender</label>
               <div class="col-md-10">
-                <input type="text" name="Kelamin_edit" id="Kelamin_edit" class="form-control" placeholder="Gender">
+                <select class="form-control" name="Kelamin_edit" id="Kelamin_edit">
+                  <option value="Putra">Putra</option>
+                  <option value="Putri">Putri</option>
+                  <option value="Campur">Campur</option>
+                </select>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Deskripsi</label>
               <div class="col-md-10">
-                <input type="text" name="deskripsi_edit" id="deskripsi_edit" class="form-control" placeholder="Deskripsi" required>
+                <textarea name="deskripsi_edit" id="deskripsi_edit" class="form-control" rows="3"></textarea>
               </div>
             </div>
             <div class="form-group row">
