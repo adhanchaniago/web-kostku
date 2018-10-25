@@ -61,8 +61,6 @@ class Admin extends CI_Controller {
 	{
 		$this->admin_model->update_User();
 
-		$output['message'] = 'Success';
-		echo json_encode($output);
 	}
 
 

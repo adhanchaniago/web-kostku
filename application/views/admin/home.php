@@ -131,7 +131,11 @@
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Level</label>
                 <div class="col-md-10">
-                  <input type="text" name="level" id="level" class="form-control"  >
+                <!-- <input type="text" name="Kelamin" id="Kelamin" class="form-control" placeholder="Gender"> -->
+                  <select class="form-control" name="level" id="level">
+                    <option value="1">Pengguna</option>
+                    <option value="2">Admin</option>
+                  </select>
                 </div>
             </div>
 
@@ -147,7 +151,7 @@
           <div class="modal-footer">
 
               <CENTER>
-              <button type="button" class="btn btn-success" id="btn_update">Update</button>
+              <button type="submit" class="btn btn-success" id="btn_update">Update</button>
             </CENTER>
 
           </div>

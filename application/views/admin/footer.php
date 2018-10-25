@@ -174,14 +174,7 @@
         });
 
         //update record to database
-        $('#btn_update').submit(function(e){
-            var id_user = $('#id_user').val();
-            var uname = $('#uname').val();
-            var email = $('#email').val();
-            var password = $('#password').val();
-            var nohp = $('#nohp').val();
-            var level = $('#level').val();
-            var status = $('#status').val();
+        $('#editUser').submit(function(e){
 
           e.preventDefault();
           $.ajax({
@@ -193,7 +186,7 @@
             cache:false,
             async:false,
             success: function(data){
-              $('#editKost').trigger("reset");
+              $('#editUser').trigger("reset");
               $('#Modal_Edit').modal('hide');
               $(".table").DataTable().destroy();
               $('tbody').empty(); 
