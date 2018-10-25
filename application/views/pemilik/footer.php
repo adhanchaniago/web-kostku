@@ -24,6 +24,7 @@
                     var i;
                     for(i=0; i<data.length; i++){
                         html += '<tr>'+
+                            '<td>'+data[i].nama +'</td>'+
                             '<td>'+data[i].alamat+'</td>'+
                             '<td>'+data[i].kota+'</td>'+
                             '<td>'+data[i].propinsi+'</td>'+
@@ -35,10 +36,10 @@
                             '<a href="javascript:void(0);" class="btn btn-info btn-sm item_detail" data-id_kost="'+data[i].id_kost+'">Data</a>'+
                             '</td>'+
                             '<td>'+
-                            '<a href="javascript:void(0);" class="btn btn-warning btn-sm item_edit" data-id_kost="'+data[i].id_kost+'" data-alamat="'+data[i].alamat+'" data-kelamin="'+data[i].Kelamin+'" data-deskripsi="'+data[i].deskripsi+'" data-lfoto="'+data[i].foto_kost+'">Edit</a>'+
+                            '<a href="javascript:void(0);" class="btn btn-warning btn-sm item_edit" data-id_kost="'+data[i].id_kost+'" data-nama="'+data[i].nama+'" data-alamat="'+data[i].alamat+'" data-kelamin="'+data[i].Kelamin+'" data-deskripsi="'+data[i].deskripsi+'" data-lfoto="'+data[i].foto_kost+'">Edit</a>'+
                             '</td>'+
                             '<td>'+
-                                '<a href="javascript:void(0);" class="btn btn-danger btn-sm item_delete" data-id_kost="'+data[i].id_kost+'" data-title="'+data[i].title+'">Hapus</a>'+
+                                '<a href="javascript:void(0);" class="btn btn-danger btn-sm item_delete" data-id_kost="'+data[i].id_kost+'">Hapus</a>'+
                             '</td>'+
                             '</tr>'; 	
                     }
@@ -83,12 +84,14 @@
         //get data for update record
         $('#show_data').on('click','.item_edit',function(){
           var id_kost        = $(this).data('id_kost');
+          var nama        = $(this).data('nama');
           var alamat        = $(this).data('alamat');
           var deskripsi        = $(this).data('deskripsi');
           var lfoto          = $(this).data('lfoto');
              
           $('#Modal_Edit').modal('show');
           $('[name="id_kost_edit"]').val(id_kost);
+          $('[name="nama_edit"]').val(nama);
           $('[name="alamat_edit"]').val(alamat);
           $('[name="deskripsi_edit"]').val(deskripsi);
           $('[name="lfoto"]').val(lfoto);

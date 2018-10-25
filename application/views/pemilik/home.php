@@ -2,7 +2,7 @@
 
   <div class="container-fluid">
   <ol class="breadcrumb">
-    <li class="active">Home</li>
+    <li class="active">Kost</li>
   </ol>
     <div class="panel panel-default">
       <div class="panel-heading"> Daftar Kost</div>
@@ -11,6 +11,7 @@
         <table class="table table-striped" id="mydata">
           <thead>
             <tr>
+              <th>Nama</th>
               <th>Alamat</th>
               <th>Kota</th>
               <th>Propinsi</th>
@@ -41,7 +42,12 @@
             <h4 class="modal-title">Tambah Kost Baru</h4>
           </div>
           <div class="modal-body">
-          <input type="hidden" name="idM" id="idM" value="">
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label">Nama</label>
+                <div class="col-md-10">
+                  <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama" required>
+                </div>
+            </div>
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Alamat</label>
                 <div class="col-md-10">
@@ -94,6 +100,12 @@
           <div class="modal-body">
           <input type="hidden" name="id_kost_edit" id="id_kost_edit" class="form-control">
           <input type="hidden" name="lfoto" id="lfoto">
+            <div class="form-group row">
+              <label class="col-md-2 col-form-label">Nama</label>
+                <div class="col-md-10">
+                  <input type="text" name="nama_edit" id="nama_edit" class="form-control" placeholder="Nama">
+                </div>
+            </div>
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Alamat</label>
                 <div class="col-md-10">

@@ -25,6 +25,11 @@ class User extends CI_Controller {
 		$this->home();
 	}
 
+	public function kamar($id_kost)
+	{
+		$this->load->view('pemilik/kamar');
+	}
+
 	public function home()
 	{
 		$this->load->view('pemilik/home');
@@ -48,19 +53,21 @@ class User extends CI_Controller {
 		if ($this->upload->do_upload("file")){ //upload file
 			$data = array('upload_data' => $this->upload->data()); //ambil file name yang diupload
 
+			$nama = $this->input->post('nama'); //get nama
 			$alamat = $this->input->post('alamat'); //get alamat
 			$Kelamin = $this->input->post('Kelamin'); //get Kelamin
 			$deskripsi = $this->input->post('deskripsi'); //get deskripsi
 			$foto_kost = $data['upload_data']['file_name']; //set file name ke variable image
 			$id_user = $session_data['id_user'];
 
-			$this->user_model->save_kost($alamat,$Kelamin,$deskripsi,$foto_kost,$id_user); //kirim value ke model user_model	
+			$this->user_model->save_kost($nama,$alamat,$Kelamin,$deskripsi,$foto_kost,$id_user); //kirim value ke model user_model	
 		}
 	}
 
 	public function edit_kost()
 	{
 		$id_kost = $this->input->post('id_kost_edit'); //get id_kost
+		$nama = $this->input->post('nama_edit'); //get nama
 		$alamat = $this->input->post('alamat_edit'); //get alamat
 		$Kelamin = $this->input->post('Kelamin_edit'); //get Kelamin
 		$deskripsi = $this->input->post('deskripsi_edit'); //get deskripsi
@@ -76,11 +83,11 @@ class User extends CI_Controller {
 
 			$image = $data['upload_data']['file_name']; //set file name ke variable image
 
-			$this->user_model->edit_kost($id_kost,$alamat,$Kelamin,$deskripsi,$foto_kost);
+			$this->user_model->edit_kost($id_kost,$nama,$alamat,$Kelamin,$deskripsi,$foto_kost);
 			unlink('./assets/img_kost/'.$hapus);
 		}
 		else {
-			$this->user_model->edit_kost($id_kost,$alamat,$Kelamin,$deskripsi,$hapus);
+			$this->user_model->edit_kost($id_kost,$nama,$alamat,$Kelamin,$deskripsi,$hapus);
 		}
 	}
 
@@ -109,6 +116,77 @@ class User extends CI_Controller {
 				unlink($file); 	
 			} 
 		} rmdir($dir); 
+	}
+
+	public function getKamar()
+	{
+		$id_kost = $this->input->post('id_kost');
+		$data=$this->user_model->getKamar($id_kost);
+        echo json_encode($data);
+	}
+
+	public function upload_kamar()
+	{
+		$config['upload_path']="./assets/img_kamar"; //path folder file upload
+		$config['allowed_types']='gif|jpg|png'; //type file yang boleh di upload
+
+		$this->load->library('upload', $config); //call library upload
+		if ($this->upload->do_upload("file")){ //upload file
+			$data = array('upload_data' => $this->upload->data()); //ambil file name yang diupload
+
+			$ukuran = $this->input->post('ukuran'); //get ukuran
+			$foto_kamar = $data['upload_data']['file_name']; //set file name ke variable image
+			$harga = $this->input->post('harga'); //get harga
+			$id_kost = $this->input->post('id_k'); //get id_kost
+
+			$this->user_model->save_kamar($ukuran,$foto_kamar,$harga,$id_kost); //kirim value ke model user_model	
+		}
+	}
+
+	public function edit_kamar()
+	{
+		$id_kamar = $this->input->post('id_kamar_edit'); //get id_kamar
+		$ukuran = $this->input->post('ukuran_edit'); //get ukuran
+		$foto_kamar = $data['upload_data']['file_name']; //set file name ke variable image
+		$harga = $this->input->post('harga_edit'); //get harga
+		$hapus = $this->input->post('lfoto'); //get lcover
+
+		$config['upload_path']="./assets/img_kamar"; //path folder file upload
+		$config['allowed_types']='gif|jpg|png'; //type file yang boleh di upload
+
+		$this->load->library('upload', $config); //call library upload
+		if ($this->upload->do_upload("file")){ //upload file
+			$data = array('upload_data' => $this->upload->data()); //ambil file name yang diupload
+
+			$image = $data['upload_data']['file_name']; //set file name ke variable image
+
+			$this->user_model->edit_kamar($id_kamar,$ukuran,$harga,$foto_kamar);
+			unlink('./assets/img_kamar/'.$hapus);
+		}
+		else {
+			$this->user_model->edit_kamar($id_kamar,$ukuran,$harga,$hapus);
+		}
+	}
+
+	public function delete_kamar()
+	{
+		$id_kamar = $this->input->post('id_kamar');
+		$data = $this->user_model->delete_kamar($id_kamar);
+		echo json_encode($data);
+	}
+
+	public function sewakan()
+	{
+		$id_kamar = $this->input->post('id_kamar');
+		$data = $this->user_model->sewakan($id_kamar);
+		echo json_encode($data);
+	}
+
+	public function kosongkan()
+	{
+		$id_kamar = $this->input->post('id_kamar');
+		$data = $this->user_model->kosongkan($id_kamar);
+		echo json_encode($data);
 	}
 
 }
