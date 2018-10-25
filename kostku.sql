@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 25, 2018 at 08:23 PM
+-- Generation Time: Oct 25, 2018 at 08:59 PM
 -- Server version: 5.7.24-0ubuntu0.16.04.1
 -- PHP Version: 7.0.32-0ubuntu0.16.04.1
 
@@ -100,13 +100,13 @@ CREATE TABLE `kost` (
 --
 
 INSERT INTO `kost` (`id_kost`, `nama`, `alamat`, `kota`, `propinsi`, `Kelamin`, `deskripsi`, `jumlah_kamar`, `foto_kost`, `id_pemilik`) VALUES
-(1, '', 'jl. kembang turi', 'Malang', 'Jawa Timur', 'Putra', 'wasd', 0, 'k1.jpg', 1),
-(2, 'Kost Ulala', 'wwww', 'Malang', 'Jawa Timur', 'Putra', 'ssss', 0, 'a.jpg', 1),
+(1, 'anna', 'jl. kembang turi no 2', 'Malang', 'Jawa Timur', 'Campur', 'wasd', 0, 'k1.jpg', 1),
+(2, 'Kost Ulala', 'yoyo', 'Malang', 'Jawa Timur', 'Putra', 'ssss', 0, 'bghome2.jpg', 1),
 (3, '', 'jfheuikjf', 'Malang', 'Jawa Timur', 'Pria', 'coba', 0, 'k130.jpg', NULL),
 (4, '', 'a', 'Malang', 'Jawa Timur', 'a', 'a', 0, 'k131.jpg', NULL),
 (6, '', 'l', 'Malang', 'Jawa Timur', 'l', 'l', 0, 'k133.jpg', NULL),
 (7, '', 'jl. remujung', 'Malang', 'Jawa Timur', 'Perempuan', 'wasd', 0, 'k1.jpg', NULL),
-(8, '', 'jl. remujung', 'Malang', 'Jawa Timur', 'Perempuan', 'wasd', 0, 'k11.jpg', 1),
+(8, 'ssssssss', 'jl. remujung', 'Malang', 'Jawa Timur', 'Putra', 'wasd', 0, 'k11.jpg', 1),
 (9, '', 'jl. remujung', 'Malang', 'Jawa Timur', 'Perempuan', 'wasd', 0, 'k12.jpg', 1),
 (10, '', 'ww', 'Malang', 'Jawa Timur', 'Campur', 'aaa', 0, 'k1.jpg', 1);
 
