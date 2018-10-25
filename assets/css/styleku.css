@@ -114,6 +114,25 @@
 	    cursor: default;
 	}
 
+	.taglokasi {
+	    background-color: #FFF; 
+	  	color: #27AB43;
+		font-size: 14px;    
+		border-radius: 15px;
+		border: 1px solid #27AB43;
+
+	    padding-top: 2px;
+	    padding-right: 5px;
+	    padding-bottom: 2px;
+	    padding-left: 5px;
+	    
+	    margin-top: 5px;
+	    margin-right: 3px;
+	    margin-bottom: 0px;
+	    margin-left: 3px;
+
+	}
+
 	.form-control-borderless {
 	    border: none;
 	}

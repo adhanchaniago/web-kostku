@@ -39,19 +39,22 @@ class Admin extends CI_Controller {
 		echo json_encode($output);
 	}
 
-	public function add_fasilitas()
-	{
-			$config['upload_path']   = './img/mapel'; 
-		         $config['allowed_types'] = 'gif|jpg|png'; 
-		         $config['max_size']      = 80000; 
-		         $config['max_width']     = 4400; 
-		         $config['max_height']    = 3320;  
-		        $this->load->library('upload', $config);
 
-			if($this->upload->do_upload('fotobaru')){
-					$this->helpmy_model_admin->new_mapel();
-					redirect('Admin/mapellist','refresh');
-				}	
+	public function upload_fasilitas()
+	{
+		$config['upload_path']="./assets/ico"; //path folder file upload
+		$config['allowed_types']='gif|jpg|png'; //type file yang boleh di upload
+
+		$this->load->library('upload', $config); //call library upload
+		if ($this->upload->do_upload("file")){ //upload file
+			$data = array('upload_data' => $this->upload->data()); //ambil file name yang diupload
+
+			$nama = $this->input->post('nama'); //get nama
+			$kategori = $this->input->post('kategori'); //get kategori
+			$ico = $data['upload_data']['file_name']; //set file name ke variable image
+		
+			$this->admin_model->new_fasilitas($kategori,$nama,$ico); //kirim value ke model admin_model	
+		}
 	}
 
 	public function update_User()

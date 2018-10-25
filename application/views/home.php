@@ -6,7 +6,7 @@
 <br>
 		
 <div class="container">
-	
+
 	<div style=" size: 40px">
 		<center>
 		<legend><strong>Rekomendasi Dari Mykost</strong></legend> 
@@ -23,11 +23,11 @@
 
 
 <!-- Lebih Banyakkkkkkkkk -->
-<br><br>
 
 <center>
+
 	<a href="<?php echo site_url('/Kostku/home_guest')?>">
-	<button type="button" class="btn" style="color: #2d2d2d;font-weight: 600;font-size: 18px;">Lihat Lebih Banyak Lagi +</button></a>
+	<button type="button" class="btn" style="color: #2d2d2d;font-weight: 600;font-size: 18px;margin-top: 20px">Lihat Lebih Banyak Lagi +</button></a>
 </center>
 
 

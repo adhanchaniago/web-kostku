@@ -29,8 +29,21 @@
                             '<td>'+data[i].username+'</td>'+
                             '<td>'+data[i].password+'</td>'+
                             '<td>'+data[i].email+'</td>'+
-                            '<td>'+data[i].no_hp+'</td>'+
-                            '<td>'+data[i].level+'</td>';
+                            '<td>'+data[i].no_hp+'</td>';
+
+                        if (data[i].level==2) {
+                            html +=
+                                '<td>'+
+                                    '<button class="tagadmin btn">Admin</button>'+
+                                '</td>';   
+
+                        }else if (data[i].level==1){
+                            html +=
+                                '<td>'+
+                                    '<button class="tagpengguna btn">Pengguna</button>'+
+                                '</td>';
+                        }
+
 
                         if (data[i].is_activated==1) {
                             html +=
@@ -49,6 +62,7 @@
                                 '</label>'+
                             '<td>';
                         }
+
                         html +=
                             '<a href="javascript:void(0);" class="btn btn-warning btn-sm item_edit" data-id_user="'+data[i].id_user+'" data-username="'+data[i].username+'" data-password="'+data[i].password+
                             '" data-email="'+data[i].email+'" data-nohp="'+data[i].no_hp+'" data-level="'+data[i].level+'" data-status="'+data[i].is_activated+'">Edit</a>'+

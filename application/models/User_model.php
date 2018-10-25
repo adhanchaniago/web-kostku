@@ -23,7 +23,7 @@ class User_model extends CI_Model {
             );
         $result=$this->db->insert('kost',$data);
         return $result;
-    }
+    }	
 
     public function edit_kost($id_kost,$alamat,$Kelamin,$deskripsi,$foto_kost){
         $data = array(

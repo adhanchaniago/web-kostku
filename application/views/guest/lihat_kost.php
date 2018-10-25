@@ -30,175 +30,22 @@ th, td {
 tr:hover {background-color:#f5f5f5;}
 </style>
 
+<div id="header_kost">
 
-	<section style="background-image: url('<?=base_url()?>img/upload_kamar/c89BU9Hk-540x720.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100% ">
-	      <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-	      <div style="height: 500px;">
-	      	
-	      	
-	      	<div class="container">
 
-	      		<div style="padding-top: 350px">
-	      			<span class="tagputri btn" style="cursor: default;">Putri<span>
-	      		</div>
-	      		<div style="font-weight: 700; font-size: 28px; margin-top: 5px;color: #fff ">
-				Kost Kembang Turi No 26 Malang
-				</div>
-	     
-	      	</div>
-	      </div>
-	</section>
 
+</div>
 
 <div class="container" style="margin-top: 10px">
 
-	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-		
-		<!-- Fasilitas Kamar -->
-		<div class="row" style="border-bottom: 1px solid #ddd; margin-top: 10px;">
-			<div class="col-lg-3 col-md-3 col-xs-12">
-				<strong style="font-size: 14px;font-weight: bold;">Fasilitas Kamar</strong>
-			</div>
-
-			<div class="col-lg-9 col-md-9 col-xs-12">
-				
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/r5PJur0V.png" alt="Kloset Duduk">
-						<span style="font-size: 14px;" >Kloset Duduk</span>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/efKlNbEw.png" alt="Kamar Mandi Luar"">
-						<span style="font-size: 14px;">Kamar Mandi Luar"</span>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/efKlNbEw.png" alt="Kamar Mandi Luar"">
-						<span style="font-size: 14px;">Kamar Mandi Luar"</span>
-					</div>
-				</div>
-			</div>
-			<div style="height: 50px"></div>
-		</div>
-		<!-- END Fasilitas Kamar -->
-
-		<!-- LUAS KAMAR -->
-		<div class="row"  style="border-bottom: 1px solid #ddd; margin-top: 10px;">
-			<div class="col-lg-3 col-md-3 col-xs-12">
-				<strong style="font-size: 14px;font-weight: bold;">Luas Kamar</strong>
-			</div>
-
-			<div class="col-lg-9 col-md-9 col-xs-12">
-				
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<span style="font-size: 14px;" > 3x3</span>
-					</div>
-				</div>
-			</div>
-			<div style="height: 40px"></div>
-		</div>
-		<!-- END LUAS KAMAR -->
-
-		<!-- KAMAR MANDI -->
-		<div class="row" style="border-bottom: 1px solid #ddd; margin-top: 10px;">
-			<div class="col-lg-3 col-md-3 col-xs-12">
-				<strong style="font-size: 14px;font-weight: bold;">Kamar Mandi</strong>
-			</div>
-
-			<div class="col-lg-9 col-md-9 col-xs-12">
-				
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/r5PJur0V.png" alt="Kloset Duduk">
-						<span style="font-size: 14px;" >Kloset Duduk</span>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/efKlNbEw.png" alt="Kamar Mandi Luar"">
-						<span style="font-size: 14px;">Kamar Mandi Luar"</span>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/efKlNbEw.png" alt="Kamar Mandi Luar"">
-						<span style="font-size: 14px;">Kamar Mandi Luar"</span>
-					</div>
-				</div>
-			</div>
-			<div style="height: 50px"></div>
-		</div>
-		<!-- END KAMAR MANDI -->
-
-		<!-- FASILITAS UMUM -->
-		<div class="row"  style="border-bottom: 1px solid #ddd; margin-top: 10px;">
-			<div class="col-lg-3 col-md-3 col-xs-12">
-				<strong style="font-size: 14px;font-weight: bold;">Fasilitas Umum</strong>
-			</div>
-
-			<div class="col-lg-9 col-md-9 col-xs-12">
-				
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/2uIBfAtw.png" alt="Kloset Duduk">
-						<span style="font-size: 14px;" > Akses 24 Jam</span>
-					</div>
-				</div>
-			</div>
-			<div style="height: 40px"></div>
-		</div>
-		<!-- FASILITAS UMUM -->
-
-		<!-- FASILITAS Parkir -->
-		<div class="row" style="border-bottom: 1px solid #ddd; margin-top: 10px;">
-			<div class="col-lg-3 col-md-3 col-xs-12">
-				<strong style="font-size: 14px;font-weight: bold;">Fasilitas Parkir</strong>
-			</div>
-
-			<div class="col-lg-9 col-md-9 col-xs-12">
-				
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/2uIBfAtw.png" alt="Kloset Duduk">
-						<span style="font-size: 14px;" >Kloset Duduk</span>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-					<div class="row">
-						<img class="img-fluid" style="height: 30px;margin-right: 10px;" src="https://mamikos.com/uploads/tags/efKlNbEw.png" alt="Kamar Mandi Luar"">
-						<span style="font-size: 14px;">Kamar Mandi Luar"</span>
-					</div>
-				</div>
-
-			</div>
-			<div style="height: 50px"></div>
-		</div>
-		<!-- FASILITAS Parkir  -->
-
-	</div>
-
-	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-		
+<!-- START KIRI ABOUT -->
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="margin-top: 15px">	
 		<div class="text-center" style=";color: #fff;font-weight: 700;height: 30px; background-color: #009B4C; ">
 			ADA 10 KAMAR
 		</div>
 		
-		<br>
-		<div style="margin-left: 15px;margin-right: 15px;">
+		<div style="margin-top: 15px; margin-left: 15px;margin-right: 15px;">
 			<table>
-			  <tr>
-			    <td>Rp 150,000</td>
-			    <td>/ hari</td>
-			  </tr>
 			  <tr>
 			    <td>Rp 650,000</td>
 			    <td>/ Minggu</td>
@@ -213,18 +60,14 @@ tr:hover {background-color:#f5f5f5;}
 				<tr>
 					<td>Tidak Termasuk Biaya Listrik</td>		
 				</tr>
-				<tr>
-					<td>Nomor Telepon : <a href="">Lihat Nomor Telepon</a></td>
-				</tr>
 			</table>
 			
 			<br>
-			<button class="btn btn-group-justified" style="background-color: #FE522A;">
+			<button class="btn btn-group-justified" style="background-color: #FE522A;" data-toggle="modal" data-target="#Modal_Hubungi">
 				<span style="color: #FFF;font-weight: 700">HUBUNGI KOST</span>
 			</button>
 
 			<div class="text-center" style="font-weight: bold; font-size: 14px">
-				<br>
 				Update Terakhir Pada
 				<br>
 				<span style="color: #27ab27;">05-10-2018</span>
@@ -232,13 +75,60 @@ tr:hover {background-color:#f5f5f5;}
 				<span style="font-size: 12px">*Data bisa berubah sewaktu-waktu</span>
 			</div>
 
+
 		</div>
 
 
 	</div>
+<!--  END KIRI ABOUT  -->
+
+
+<!-- START DAfTR KAMAR -->
+	<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+		<div id="daftar_kamar">
+		
+
+
+
+		</div>
+		
+	</div>
+<!-- End Kanan Kamar -->
 	
 </div>
 
+
+<!-- Modal -->
+    <div id="Modal_Hubungi" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+
+		  <div class="modal-header">
+           
+          </div>
+
+          <div class="modal-body">
+
+			<center>
+	            <label>Nomor :</label>
+				<div class="row" style="margin-left: 50px;">
+	              <img src="<?=base_url()?>assets/img/tlp.jpg" height="60" width="60">
+	              <div id="no_hpp" style="margin-left: 20px; font-weight: 700; font-size: 28px;margin-top: 15px">
+	              </div>
+	            </div>
+			</center>
+
+          </div>
+           <div class="modal-footer">
+           
+          </div>
+        </div>
+
+      </div>
+    </div>
+<!-- End MODAL ADD-->
 
 
 
@@ -262,4 +152,4 @@ tr:hover {background-color:#f5f5f5;}
         });
     </script>
 
-<?php $this->load->view('header_footer/footer'); ?>
+<?php $this->load->view('guest/footer'); ?>

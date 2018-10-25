@@ -19,7 +19,7 @@ class Kostku extends CI_Controller {
 			if ($lvl['level']==2) {
 				redirect('Admin','refresh');
 			}else{
-				$this->home_user();
+				$this->load->view('user/home');
 			}
 			
 		}else{
@@ -28,10 +28,7 @@ class Kostku extends CI_Controller {
 		
 	}
 
-	public function getKostku()
-	{
-        echo json_encode( $this->Kostku_model->get_kost());
-	}
+	
 
 	public function daftar()
 	{
@@ -79,10 +76,6 @@ class Kostku extends CI_Controller {
 		}
 	}
 
-	public function home_user()
-	{
-		$this->load->view('user/home');
-	}
 
 	public function logout()
 	{
@@ -91,11 +84,35 @@ class Kostku extends CI_Controller {
 		redirect('Kostku','refresh');
 	}
 
-	public function lihat_kost()
+	public function lihat_kost($id)
 	{
 		$this->load->view('guest/lihat_kost');
 	}
-////////////////////////  Process sys   //////////////////////////////////////////////////
+
+	public function detail_kamar($id)
+	{
+		$this->load->view('guest/detail_kamar');
+	}
+
+////////////////////////  Process JSOOOOOONNN  //////////////////////////////////////////////////
+
+
+	public function get_kost_by($a)
+	{
+		echo json_encode( $this->Kostku_model->get_kost_by($a));
+	}
+	public function get_info_kost_by($a)
+	{
+		echo json_encode( $this->Kostku_model->get_info_kost_by($a));
+	}
+
+	public function getKostku()
+	{
+        echo json_encode( $this->Kostku_model->get_kost());
+	}
+
+
+////////////////////////  Process JSOOOOOONNN  //////////////////////////////////////////////////
 
 
 	

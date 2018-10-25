@@ -36,6 +36,17 @@ class admin_model extends CI_Model {
 		return $result;
 	}
 
+    public function new_fasilitas($kategori,$nama_fasilitas,$icon){
+        $data = array(
+                'kategori'  => $kategori, 
+                'nama_fasilitas' => $nama_fasilitas, 
+                'icon' => $icon
+            );
+        $result=$this->db->insert('daftar_fasilitas',$data);
+        return $result;
+    }
+    
+
 }
 
 /* End of file user_model.php */

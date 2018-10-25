@@ -5,7 +5,9 @@
     <li class="active">Home</li>
   </ol>
     <div class="panel panel-default">
-<div class="panel-heading"><a href="<?=site_url('Admin/')?>">Daftar User</a>  <a href="<?=site_url('Admin/data_fasilitas')?>">Daftar Fasilitas</a></div>
+
+      
+      <div class="panel-heading"><a href="<?=site_url('Admin/')?>">Daftar User</a>  <a href="<?=site_url('Admin/data_fasilitas')?>">Daftar Fasilitas</a></div>
       <div class="panel-body">
         <div class="pull-right"><a href="javascript:void(0);" class="btn btn-primary" data-toggle="modal" data-target="#Modal_Add"><span class="fa fa-plus"></span> Tambah User</a></div>
         <table class="table table-striped" id="mydata">
