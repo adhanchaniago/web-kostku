@@ -83,7 +83,7 @@ class User extends CI_Controller {
 
 			$image = $data['upload_data']['file_name']; //set file name ke variable image
 
-			$this->user_model->edit_kost($id_kost,$nama,$alamat,$Kelamin,$deskripsi,$foto_kost);
+			$this->user_model->edit_kost($id_kost,$nama,$alamat,$Kelamin,$deskripsi,$image);
 			unlink('./assets/img_kost/'.$hapus);
 		}
 		else {
@@ -160,7 +160,7 @@ class User extends CI_Controller {
 
 			$image = $data['upload_data']['file_name']; //set file name ke variable image
 
-			$this->user_model->edit_kamar($id_kamar,$ukuran,$harga,$foto_kamar);
+			$this->user_model->edit_kamar($id_kamar,$ukuran,$harga,$image);
 			unlink('./assets/img_kamar/'.$hapus);
 		}
 		else {
