@@ -30,11 +30,10 @@
                             '<td>'+data[i].kategori+'</td>'+
                             '<td>'+data[i].nama_fasilitas+'</td>'+
                             '<td>'+data[i].id_fasilitas+'</td>'+
-                            '<td><a href="javascript:void(0);" class="btn btn-warning btn-sm item_edit" data-id_user="'+data[i].id_user+'" data-username="'+data[i].username+'" data-password="'+data[i].password+
-                            '" data-email="'+data[i].email+'" data-nohp="'+data[i].no_hp+'" data-level="'+data[i].level+'" data-status="'+data[i].is_activated+'">Edit</a>'+
+                            '<td><a href="javascript:void(0);" class="btn btn-warning btn-sm item_edit" data-id_fas="'+data[i].id_fasilitas+'" data-nama_fasilitas="'+data[i].nama_fasilitas+'" data-icon="'+data[i].icon+'" data-kategori="'+data[i].kategori+'">Edit</a>'+
                             '</td>'+
                             '<td>'+
-                                '<a href="javascript:void(0);" class="btn btn-danger btn-sm item_delete" data-id_user="'+data[i].id_user+'">Hapus</a>'+
+                                '<a href="javascript:void(0);" class="btn btn-danger btn-sm item_delete" data-id_fasilitas="'+data[i].id_fasilitas+'">Hapus</a>'+
                             '</td>'+
                             '</tr>';
                     }
@@ -46,6 +45,46 @@
  
             });
         }
+// ???????????  STart  EDITTT   UPDATEEE  FASILITAS   ??????????///////////////////
+ 
+        $('#show_data').on('click','.item_edit',function(){ //get data for update record
+          var id_fa        = $(this).data('id_fas'); //get id fasilitas
+          var kat        = $(this).data('kategori'); //get kategori
+          var namaf        = $(this).data('nama_fasilitas'); //get nama fasilitas
+          var ico        = $(this).data('icon'); ///get icon
+             
+          $('#Modal_Edit').modal('show');
+          // $('[name="fileE"]').val(ico);
+          $('[name="namaE"]').val(namaf);
+          // $('[name="kategoriE"]').val(kat);
+          $('[name="idf"]').val(id_fa);
+          
+        });
+        
+        //update record to database
+        $('#editfasilitas').submit(function(e){
+          e.preventDefault();
+          $.ajax({
+            url:'<?php echo base_url();?>index.php/User/edit_kost', //URL submit
+            type:"post", //method Submit
+            data:new FormData(this), //penggunaan FormData
+            processData:false,
+            contentType:false,
+            cache:false,
+            async:false,
+            success: function(data){
+              $('#editfasilitas').trigger("reset");
+              $('#Modal_Edit').modal('hide');
+              $(".table").DataTable().destroy();
+              $('tbody').empty(); 
+              show_fasilitas();
+            }
+          });
+          return false;
+        });
+
+// ???????????  endddd  EDITTT   UPDATEEE  FASILITAS   ??????????///////////////////
+
 
 
 // /////  // / add Fasilitas  ////////////////////////////////////////////
@@ -70,7 +109,36 @@
             return false;
         });
 
-        //get data for delete record
+///////////  Delete Modalll ////////////
+        // show modal Delete
+         $('#show_data').on('click','.item_delete',function(){
+            var id_fasilitas = $(this).data('id_fasilitas');
+             
+            $('#Modal_Delete').modal('show');
+            $('[name="id_fasilitas"]').val(id_fasilitas);
+        });
+
+        //delete record to database
+         $('#btn_deleted').on('click',function(){
+            var id_fasilitas = $('#id_fasilitas').val();
+            $.ajax({
+                type : "POST",
+                url  : "<?php echo site_url(); ?>/Admin/delete_Fasilitas",
+                dataType : "JSON",
+                data : {id_fasilitas:id_fasilitas},
+                success: function(){
+
+                    $('[name="id_fasilitas"]').val("");
+                    $('#Modal_Delete').modal('hide');
+                    $(".table").DataTable().destroy();
+                    $('tbody').empty(); 
+                    show_fasilitas();
+                }
+            });
+            return false;
+        });
+
+///////////  Delete Modalll ////////////
        
  
     });

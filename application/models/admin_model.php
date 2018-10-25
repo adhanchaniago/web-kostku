@@ -36,6 +36,7 @@ class admin_model extends CI_Model {
 		return $result;
 	}
 
+// //////    FASILITASDSSS ?????????///////
     public function new_fasilitas($kategori,$nama_fasilitas,$icon){
         $data = array(
                 'kategori'  => $kategori, 
@@ -45,6 +46,26 @@ class admin_model extends CI_Model {
         $result=$this->db->insert('daftar_fasilitas',$data);
         return $result;
     }
+
+    public function update_fasilitas($id,$kategori,$nama_fasilitas,$icon){
+        $data = array(
+                'kategori'  => $kategori, 
+                'nama_fasilitas' => $nama_fasilitas, 
+                'icon' => $icon
+            );
+        $this->db->where('id_fasilitas', $id);
+        $result=$this->db->update('daftar_fasilitas',$data);
+        return $result;
+    }
+
+    public function deleted_fasilitas($id)
+    {
+        $this->db->where('id_fasilitas', $id);
+        $result = $this->db->delete('daftar_fasilitas');
+        return $result;
+    }
+
+// //////    FASILITASDSSS ?????????///////
     
 
 }

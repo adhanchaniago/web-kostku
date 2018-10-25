@@ -14,20 +14,9 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/home');
 	}
 
-	public function data_fasilitas()
-	{
-		$this->load->view('admin/fasilitas');
-	}
-
-
 	public function getUser()
 	{
         echo json_encode( $this->admin_model->get_user());
-	}
-
-	public function getFasilitas()
-	{
-        echo json_encode( $this->admin_model->get_fasilitas());
 	}
 
 	public function delete_User()
@@ -39,6 +28,16 @@ class Admin extends CI_Controller {
 		echo json_encode($output);
 	}
 
+/////// FASILITASS ?????????????????????///////////
+	public function data_fasilitas()
+	{
+		$this->load->view('admin/fasilitas');
+	}
+
+	public function getFasilitas()
+	{
+        echo json_encode( $this->admin_model->get_fasilitas());
+	}
 
 	public function upload_fasilitas()
 	{
@@ -56,6 +55,21 @@ class Admin extends CI_Controller {
 			$this->admin_model->new_fasilitas($kategori,$nama,$ico); //kirim value ke model admin_model	
 		}
 	}
+
+	public function update_fasilitas()
+	{
+		$this->admin_model->update_fasilitas();
+
+	}
+
+	public function delete_Fasilitas()
+	{
+		$id_fasilitas = $this->input->post('id_fasilitas');
+		$this->admin_model->deleted_fasilitas($id_fasilitas);
+				$output['message'] = 'Success';
+		echo json_encode($output);
+	}
+//////// FASILITAS   ??????////////////////////////
 
 	public function update_User()
 	{
