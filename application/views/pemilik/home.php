@@ -87,7 +87,7 @@
             <h4 class="modal-title">Edit Kost</h4>
           </div>
           <div class="modal-body">
-          <input type="hidden" name="id_kost_edit" id="id_kost_edit">
+          <input type="hidden" name="id_kost_edit" id="id_kost_edit" class="form-control">
           <input type="hidden" name="lfoto" id="lfoto">
             <div class="form-group row">
               <label class="col-md-2 col-form-label">Alamat</label>

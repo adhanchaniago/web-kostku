@@ -77,17 +77,19 @@
         $('#show_data').on('click','.item_detail',function(){
             var id_kost = $(this).data('id_kost');
              
-            setTimeout(' window.location.href = "<?php echo site_url(); ?>/Admin/chapter/'+id_kost+'" ',500);
+            setTimeout(' window.location.href = "<?php echo site_url(); ?>/User/kamar/'+id_kost+'" ',500);
         });
 
         //get data for update record
         $('#show_data').on('click','.item_edit',function(){
+          var id_kost        = $(this).data('id_kost');
           var alamat        = $(this).data('alamat');
           var kelamin           = $(this).data('kelamin');
           var deskripsi        = $(this).data('deskripsi');
           var lfoto          = $(this).data('lfoto');
              
           $('#Modal_Edit').modal('show');
+          $('[name="id_kost_edit"]').val(id_kost);
           $('[name="alamat_edit"]').val(alamat);
           $('[name="Kelamin_edit"]').val(kelamin);
           $('[name="deskripsi_edit"]').val(deskripsi);

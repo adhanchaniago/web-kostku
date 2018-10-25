@@ -84,6 +84,16 @@ class User extends CI_Controller {
 		}
 	}
 
+	public function coba()
+	{
+		$id_kost = 2; //get id_kost
+		$alamat = 'aaaa'; //get alamat
+		$Kelamin = 'Putra'; //get Kelamin
+		$deskripsi = 'ssss'; //get deskripsi
+		$foto_kost = 'a.jpg'; //set file name ke variable image
+			$this->user_model->edit_kost($id_kost,$alamat,$Kelamin,$deskripsi,$foto_kost);
+	}
+
 	public function delete_kost()
 	{
 		$id_kost = $this->input->post('id_kost');
