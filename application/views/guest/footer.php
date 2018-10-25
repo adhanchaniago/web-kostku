@@ -25,7 +25,7 @@
 			                    	 html += 
 			                    	 		'<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 20px">'+
 												'<div class="card">'+
-													'<img class="img-responsive" src="<?=base_url()?>img/m/k1.jpg">'+
+													'<img class="img-responsive" src="<?=base_url()?>assets/img_kamar/'+data[i].foto_kamar+'">'+
 													'<div>'+
 														'<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color: #27AB27">'+
 															'<div class="text-center" style=";color: #fff;font-weight: 700; ">Rp. '+data[i].harga+' / bln</div>'+
@@ -60,7 +60,7 @@
 			                    for(i=0; i<data.length; i++){
 			                
 			                	html += 
-			                	'<section style="background-image: url(<?=base_url()?>img/upload_kamar/c89BU9Hk-540x720.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100% ">'+
+			                	'<section style="background-image: url(<?=base_url()?>assets/img_kost/'+data[i].foto_kost+'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100% ">'+
 								      '<div style="height: 250px;">'+
 								      	'<div class="container">'+
 								      		'<div style="padding-top: 140px">';

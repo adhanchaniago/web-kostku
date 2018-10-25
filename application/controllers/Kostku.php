@@ -19,7 +19,7 @@ class Kostku extends CI_Controller {
 			if ($lvl['level']==2) {
 				redirect('Admin','refresh');
 			}else{
-				$this->load->view('user/home');
+				$this->load->view('pemilik/home');
 			}
 			
 		}else{
@@ -104,6 +104,10 @@ class Kostku extends CI_Controller {
 	public function get_info_kost_by($a)
 	{
 		echo json_encode( $this->Kostku_model->get_info_kost_by($a));
+	}
+	public function get_info_kamar_by($a)
+	{
+		echo json_encode( $this->Kostku_model->get_info_kamar_by($a));
 	}
 
 	public function getKostku()

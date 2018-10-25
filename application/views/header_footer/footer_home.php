@@ -26,7 +26,7 @@
 			                    	 html += 
 			                    	 		'<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-top: 20px">'+
 												'<div class="card">'+
-													'<img class="img-responsive" src="<?=base_url()?>img/m/k1.jpg">'+
+													'<img class="img-responsive" src="<?=base_url()?>assets/img_kost/'+data[i].foto_kost+'">'+
 													'<div>'+
 														'<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="background-color: #27AB27">'+
 															'<div class="text-center" style=";color: #fff;font-weight: 700; ">ADA '+data[i].jumlah_kamar+' KAMAR</div>'+

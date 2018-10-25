@@ -30,25 +30,17 @@ th, td {
 tr:hover {background-color:#f5f5f5;}
 </style>
 
-
-	<section style="background-image: url('<?=base_url()?>img/upload_kamar/c89BU9Hk-540x720.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100% ">
-	      <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-	      <div style="height: 300px;">
-	      	
-	      </div>
-	</section>
-
+<div id="poster">
+	
+</div>
 
 <div class="container" style="margin-top: 10px">
 
 	<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+		<div id="header_nama">
+			
+		</div>
 		
-		<div style="font-weight: 700; font-size: 28px; margin-top: 5px; ">
-			Kost Kembang Turi No 26 Malang
-		</div>
-		<div style="font-weight: 700; font-size: 14px; color: #27AB43">
-			Klojen, Malang <span class="taglokasi btn">&nbsp<span class="glyphicon glyphicon-map-marker"></span>&nbspLihat Lokasi&nbsp</span>
-		</div>
 
 <br>
 <!-- STARTT FASILITASSSS -->
@@ -249,4 +241,4 @@ tr:hover {background-color:#f5f5f5;}
         });
     </script>
 
-<?php $this->load->view('header_footer/footer'); ?>
+<?php $this->load->view('guest/footer_kamar'); ?>

@@ -43,7 +43,7 @@ class Kostku_model extends CI_Model {
 
 	public function get_kost()
     {
-    	$this->db->select('id_kamar,foto_kamar,harga,alamat,Kelamin,jumlah_kamar,kamar.id_kost as id_k');
+    	$this->db->select('id_kamar,foto_kost,alamat,Kelamin,jumlah_kamar,kamar.id_kost as id_k');
 		$this->db->from('kamar');
 		$this->db->join('kost', 'kamar.id_kost = kost.id_kost');
 		// $this->db->where('id_user',$sessData['username']);
@@ -69,6 +69,18 @@ class Kostku_model extends CI_Model {
 		$this->db->join('user', 'kost.id_pemilik = user.id_user');
 		
 		$this->db->where('id_kost',$id);
+
+		$query=$this->db->get();
+		return $query->result();
+    }   
+
+    public function get_info_kamar_by($id)
+    {
+    	$this->db->select('*');
+		$this->db->from('kamar');
+		$this->db->join('kost', 'kamar.id_kost = kost.id_kost');
+		
+		$this->db->where('id_kamar',$id);
 
 		$query=$this->db->get();
 		return $query->result();
